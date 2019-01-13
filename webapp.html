@@ -19,29 +19,29 @@
                     var computerMove = computerSlection.toLowerCase();
                     if(playerMove == "rock"){
                         switch(computerMove){
-                            case(rock):
+                            case("rock"):
                                 return("Tie");
-                            case(scissors):
+                            case("scissors"):
                                 return("You Win! " + playerMove + " beats " + computerMove);
-                            case(paper):
+                            case("paper"):
                                 return("You Lose! " + computerMove + " beats " + playerMove);
                         }
                     }else if(playerMove=="scissors"){
                         switch(computerMove){
-                            case(rock):
+                            case("rock"):
                                 return("You Lose! " + computerMove + " beats " + playerMove);
-                            case(scissors):
+                            case("scissors"):
                                 return("Tie");
-                            case(paper):
+                            case("paper"):
                                 return("You Win! " + playerMove + " beats " + computerMove);
                         }
                     }else{
                         switch(computerMove){
-                            case(rock):
+                            case("rock"):
                                 return("You Win! " + playerMove + " beats " + computerMove);
-                            case(scissors):
+                            case("scissors"):
                                 return("You Lose! " + computerMove + " beats " + playerMove);
-                            case(paper):
+                            case("paper"):
                                 return("Tie");
                         }
                     }
