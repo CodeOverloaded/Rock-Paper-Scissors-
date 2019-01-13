@@ -8,7 +8,7 @@
                 document.write(playerSelection);
                 var computerSelection = computerPlay();
                 document.write(computerSelection);
-                
+
                 function computerPlay(){
                     var num = Math.floor(Math.random() * (3)) + 1;
                     if(num == 1){
@@ -21,7 +21,7 @@
                 }
                 function playRound(playerSelection, computerSelection){
                     var playerMove = playerSelection.toLowerCase();
-                    var computerMove = computerSlection.toLowerCase();
+                    var computerMove = computerSelection.toLowerCase();
                     if(playerMove == "rock"){
                         switch(computerMove){
                             case("rock"):
