@@ -3,8 +3,6 @@
     <head>
         <body>
             <script type="text/javascript">
-                alert("Start");
-
                 function computerPlay(){
                     var num = Math.floor(Math.random() * (3)) + 1;
                     if(num == 1){
@@ -50,7 +48,7 @@
 
                 function game(){
                     for(var i = 0; i < 5; i++){
-                        document.write(playRound(prompt(), computerPlay()));
+                        document.write(playRound(prompt(), computerPlay()) + "\n");
                     }
                 }
 
