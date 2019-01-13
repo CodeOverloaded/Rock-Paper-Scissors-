@@ -16,45 +16,61 @@
                 function playRound(playerSelection, computerSelection){
                     var playerMove = playerSelection.toLowerCase();
                     var computerMove = computerSelection.toLowerCase();
+                    var ans = "";
                     if(playerMove == "rock"){
                         switch(computerMove){
                             case("rock"):
-                                return("Tie");
+                                ans = "Tie";
+                                break;
                             case("scissors"):
-                                return("You Win! " + playerMove + " beats " + computerMove);
+                                ans = "You Win! " + playerMove + " beats " + computerMove;
+                                break;
                             case("paper"):
-                                return("You Lose! " + computerMove + " beats " + playerMove);
+                                ans = "You Lose! " + computerMove + " beats " + playerMove;
+                                break;
                         }
-                    }else if(playerMove=="scissors"){
+                    } else if(playerMove=="scissors"){
                         switch(computerMove){
                             case("rock"):
-                                return("You Lose! " + computerMove + " beats " + playerMove);
+                                ans = "You Lose! " + computerMove + " beats " + playerMove;
+                                break;
                             case("scissors"):
-                                return("Tie");
+                                ans = "Tie";
+                                break;
                             case("paper"):
-                                return("You Win! " + playerMove + " beats " + computerMove);
+                                ans = "You Win! " + playerMove + " beats " + computerMove;
+                                break;
                         }
-                    }else{
+                    } else if (playerMove == "paper"){
                         switch(computerMove){
                             case("rock"):
-                                return("You Win! " + playerMove + " beats " + computerMove);
+                                ans = "You Win! " + playerMove + " beats " + computerMove;
+                                break;
                             case("scissors"):
-                                return("You Lose! " + computerMove + " beats " + playerMove);
+                                ans = "You Lose! " + computerMove + " beats " + playerMove;
+                                break;
                             case("paper"):
-                                return("Tie");
+                                ans = "Tie";
+                                break;
                         }
                     }
+                    alert("player move: " + playerMove + " computer move: " + computerMove);
                 }
-
-                function game(){
+                /* function game(){
                     for(var i = 1; i <= 5; i++){
                         document.write("Round " + i + ": ");
                         document.writeln(playRound(prompt(), computerPlay())); 
                     }
-                }
+                } */
 
-                game();
+                // game();
             </script>
+            <form> 
+                <input type = "button" value = "Rock" onclick="playRound('rock', computerPlay());">
+                <input type = "button" value = "Scissors" onclick="playRound('scissors', computerPlay());">
+                <input type = "button" value = "Paper" onclick="playRound('paper', computerPlay());">
+                <div id = "textArea"></div>
+            </form>
         </body>
     </head>
 </html>
