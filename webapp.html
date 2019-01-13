@@ -4,6 +4,11 @@
         <body>
             <script type="text/javascript">
                 alert("Start");
+                var playerSelection = "rock";
+                document.write(playerSelection);
+                var computerSelection = computerPlay();
+                document.write(computerSelection);
+                
                 function computerPlay(){
                     var num = Math.floor(Math.random() * (3)) + 1;
                     if(num == 1){
@@ -46,11 +51,6 @@
                         }
                     }
                 }
-
-                var playerSelection = "rock";
-                document.write(playerSelection);
-                var computerSelection = computerPlay();
-                document.write(computerSelection);
                 alert(playRound(playerSelection, computerSelection));
             </script>
         </body>
