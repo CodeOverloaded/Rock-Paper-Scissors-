@@ -4,10 +4,6 @@
         <body>
             <script type="text/javascript">
                 alert("Start");
-                var playerSelection = "rock";
-                document.write(playerSelection);
-                var computerSelection = computerPlay();
-                document.write(computerSelection);
 
                 function computerPlay(){
                     var num = Math.floor(Math.random() * (3)) + 1;
@@ -51,7 +47,14 @@
                         }
                     }
                 }
-                alert(playRound(playerSelection, computerSelection));
+
+                function game(){
+                    for(var i = 0; i < 5; i++){
+                        document.write(playRound(prompt(), computerPlay()));
+                    }
+                }
+
+                game();
             </script>
         </body>
     </head>
