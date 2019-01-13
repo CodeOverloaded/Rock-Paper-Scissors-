@@ -48,8 +48,9 @@
 
                 function game(){
                     for(var i = 0; i < 5; i++){
+                        document.write("Round " + i + ": ");
                         document.write(playRound(prompt(), computerPlay()));
-                        document.write("<br>");
+                        document.writeln();
                     }
                 }
 
