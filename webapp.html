@@ -3,6 +3,7 @@
     <head>
         <body>
             <script type="text/javascript">
+                alert("Start");
                 function computerPlay(){
                     var num = Math.floor(Math.random() * (3)) + 1;
                     if(num == 1){
@@ -46,8 +47,8 @@
                     }
                 }
 
-                const playerSelection = "rock";
-                const computerSelection = computerPlay();
+                var playerSelection = "rock";
+                var computerSelection = computerPlay();
                 alert(playRound(playerSelection, computerSelection));
             </script>
         </body>
